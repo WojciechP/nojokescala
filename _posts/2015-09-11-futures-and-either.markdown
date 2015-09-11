@@ -216,8 +216,12 @@ Sometimes it's not possible. But most of the time you know exactly what
 kind of data to accept, so you can design your types to be more restrictive:
 
 ```scala
-final case class Record(id: UniqueID, name: String, data: WeirdDataType) {
-  require(name.length >= 2 && name.length <= 20, "name has to be 2-20 characters long")
+final case class Record(
+    id: UniqueID,
+    name: String,
+    data: WeirdDataType) {
+  require(name.length >= 2 && name.length <= 20,
+    "name has to be 2-20 characters long")
   require(id != null)
   require(data != null)
 }
