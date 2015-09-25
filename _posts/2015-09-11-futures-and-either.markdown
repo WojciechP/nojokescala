@@ -45,11 +45,12 @@ There is a single most important piece of advise regarding throwing exceptions i
 > Don't throw exceptions for indicating business errors.
 
 This is a no-exception rule (pun intended). When somebody describes
-a system behavior, they might say something like that: "when a user tries to access
-the payroll, if he is not authorized, the system rejects him with an error".
+a system behavior, they might say something like that: "anybody can paint
+a *Thing* to one of three colors, but if the *Thing* is *Blue*
+and someone tries to paint it *Red*, the system rejects him with an error".
 This is the business logic, therefore no `Exception` should be raised.
 It is actually *expected* system behavior for the user to be rejected.
-On the contrary, when the authorization backend fails because a rogue admin
+On the contrary, when the painting backend fails because a rogue admin
 pulled the hard drive out - then yout have a reason to throw an exception.
 
   [terse errors]: https://tersesystems.com/2012/12/27/error-handling-in-scala/ "Error handling in Scala"
@@ -134,18 +135,16 @@ the API users will have to code against the case of failure. Let's
 introduce our error types then:
 
 ```scala
-sealed abstract class StorageError(message: String) extends
-  Exception(message)
+sealed trait StorageError
 
-final case class MalformedRecord(record: Record) extends
-    StorageError("Malformed record " + record)
+final case class MalformedRecord(record: Record)
+  extends StorageError
 
-final case class DuplicateId(record:Record) extends
-    StorageError("Duplicate id in record " + record)
+final case class DuplicateId(record: Record)
+  extends StorageError
 
-final case class DuplicateTitle(record: Record) extends
-    StorageError("Duplicate title in record " + record)
-
+final case class DuplicateTitle(record: Record)
+  extends StorageError
 ```
 
 Note that the `StorageError` class is `sealed` and the classes are `final` - you
@@ -227,7 +226,7 @@ final case class Record(
 }
 ```
 
-This is a kind of a dirty patch to the Scala type system - since we don't
+*This is NOT validation,* just a dirty patch to the Scala type system - since we don't
 know how to check string length statically, we'll do it in the runtime,
 but as soon as possible to obey the "fail fast" principle.
 Now the service users will have to worry about input validation, but they
@@ -311,3 +310,8 @@ The most important pieces of advice are:
 * Don't raise exceptions for no good reason
 * Use monads where you expect business failures (`Either` or `Option`)
 * Design your types so that you know their values present valid data
+
+I hope you've got some new insights on the matter by now. If you have
+encountered any other patterns for handling errors please share them in the
+comments. Special thanks to Artur Bańkowski for reviewing the early version
+of the post.
