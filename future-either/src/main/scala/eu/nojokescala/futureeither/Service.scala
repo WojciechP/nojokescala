@@ -11,8 +11,8 @@ trait Service {
 }
 
 object Service {
-  sealed abstract class StorageError(message: String) extends Exception(message)
+  sealed trait StorageError
 
-  final case class DuplicateId(record: Record) extends StorageError("Duplicate ID in record " + record)
-  final case class DuplicateTitle(record: Record) extends StorageError("Duplicate title in record " + record)
+  final case class DuplicateId(record: Record) extends StorageError
+  final case class DuplicateTitle(record: Record) extends StorageError
 }
