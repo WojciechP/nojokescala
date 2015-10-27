@@ -40,7 +40,7 @@ them often.
 You need a place to document your API. For small projects it might be
 perfectly sufficient to write everything in Markdown and put in a repository.
 For bigger projects you might want to employ some specific tools like
-[API blueprint](apiblueprint.org) or [swagger](swagger.io). The choice of the
+[API blueprint](http://apiblueprint.org) or [swagger](http://swagger.io). The choice of the
 tool is secondary as long as the following conditions are met:
 
 1. All the API documentation for a single project is in one place
