@@ -2,15 +2,14 @@
 layout: post
 title: "Futures and Either - asynchronous error handling"
 date: "2015-09-11 16:38"
-snippet: >
-  Design your asynchronous Scala API so that clients can choose
-  the level of error handling appropriate to their needs.
-
-meta:
-  description: "Scala asynchronous error handling with Future and Either"
+snippet: "Design your asynchronous Scala API so that clients can choose the level of error handling appropriate to their needs.\n"
+meta: 
+  description: Scala asynchronous error handling with Future and Either
   keywords: "Scala, Future, Either, error handling, concurrent, asynchronous"
-permalink: /post/future-either
+permalink: "/post/future-either"
+published: true
 ---
+
 
 This article is mostly about designing your Scala API so that it allows
 to control the level of error handling. The source code for the included
@@ -320,3 +319,6 @@ I hope you've got some new insights on the matter by now. If you have
 encountered any other patterns for handling errors please share them in the
 comments. Special thanks to Artur Bańkowski for reviewing the early version
 of the post.
+
+# Footnotes
+blah, blah.
