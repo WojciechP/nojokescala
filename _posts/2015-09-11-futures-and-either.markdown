@@ -323,3 +323,5 @@ of the post.
 
 
 Tu NowaQ dopisał coś mądrego.
+
+A tutaj Nowaq pisze mądre rzeczy na komórce :P
