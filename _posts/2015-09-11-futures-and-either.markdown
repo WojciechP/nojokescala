@@ -320,3 +320,6 @@ I hope you've got some new insights on the matter by now. If you have
 encountered any other patterns for handling errors please share them in the
 comments. Special thanks to Artur Bańkowski for reviewing the early version
 of the post.
+
+
+Tu NowaQ dopisał coś mądrego.
