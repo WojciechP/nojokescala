@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Before you build a web app"
+title: "Before you build a web app - pre-development REST checklist"
 date: "2015-10-27 15:34"
 snippet: >
   Try not to fail before you write a single line of code
@@ -21,17 +21,17 @@ before you start coding*.
 You are most likely building a REST service.
 Even if you don't want your API to be public, it's a good idea
 to have REST API and build a web app independently. Therefore spend
-some time learning how REST works.
+some time learning how the REST works.
 
 ## Write a request yourself
-You need to understand how HTTP works. Go `telnet example.com 80` and
+You need to understand the HTTP. Go `telnet example.com 80` and
 write a `GET` request to fetch the main page. Keep playing around until
 you receive a `200 OK` response.
 
 ## HTTP Methods and Status Codes
-There are three concepts that are absolutely fundamental: resources, methods and
-status codes. Make sure everybody has a good understanding of those.
-There is, for example, a nice cheat sheet with status code available
+There are three concepts that are absolutely fundamental: *resources*, *methods* and
+*status codes*. Make sure everybody has a good understanding of those.
+There is, for example, a nice cheat sheet with the status codes available
 at [restapitutorial.com](http://www.restapitutorial.com/httpstatuscodes.html) -
 pay special attention to the starred status codes as you probably will use
 them often.
@@ -52,7 +52,7 @@ tool is secondary as long as the following conditions are met:
 The first two points are quite self-explainatory. The third point,
 about docs being complete and correct is tricky: depending on your
 desired project quality it might mean different things. An example
-of *complete API doc* definition might be as follows:
+of a *complete API doc* definition might be as follows:
 
 > All the endpoints have documented url params, payloads and response bodies.
 
