@@ -2,6 +2,7 @@
 layout: post
 title: "Contract First REST API design"
 date: "2015-12-01 16:00"
+permalink: "/post/contract-first/index"
 redirect_to: "http://wojciechp.com/2015/contract-first/"
 snippet: >
   Shipping useful software comes down to two major difficulties:
@@ -11,7 +12,6 @@ snippet: >
 meta:
   description: "Benefits of using contract-first approach for REST API design"
   keywords: "API, REST, design, contract first, software development, web services"
-permalink: /post/contract-first
 ---
 
 We're mostly building web applications these days. Even standalone apps have
