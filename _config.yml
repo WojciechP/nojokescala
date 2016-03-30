@@ -23,3 +23,6 @@ paginate:         5
 
 github:
   repo:           https://github.com/WojciechP/nojokescala
+
+gems:
+  - jekyll-redirect-from

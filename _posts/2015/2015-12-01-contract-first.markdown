@@ -2,6 +2,7 @@
 layout: post
 title: "Contract First REST API design"
 date: "2015-12-01 16:00"
+redirect_to: "http://wojciechp.com/2015/contract-first/"
 snippet: >
   Shipping useful software comes down to two major difficulties:
   communication and software engineering. Describing your REST API
